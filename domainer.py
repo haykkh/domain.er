@@ -1,7 +1,24 @@
-tlds = open('tld2.txt').read().splitlines()[1:]
-words = open('100k.txt', encoding='UTF-8').read().splitlines()
-domains = open('domains.txt', 'w',encoding='UTF-8')
+import argparse, urllib.request
+
+parser = argparse.ArgumentParser(description='Find possible domains that use the tld in the name')
+parser.add_argument('--tld','-t', default=None,type=argparse.FileType('r'), help='list of top level domains (tlds), default iana.org list if left empty')
+parser.add_argument('--words','-w', required=True, type=argparse.FileType('r'), help='list of words to search')
+parser.add_argument('--domains', '-d', default='domains.txt', type=argparse.FileType('w'), help="file to output to, defaults to domains.txt")
+
+args = parser.parse_args()
+
+
+
+if args.tld == None:
+	tlds = urllib.request.urlopen('http://data.iana.org/TLD/tlds-alpha-by-domain.txt').read().decode('UTF-8').splitlines()[1:]
+else:
+	tlds = args.tld.read().splitlines()	
+
+words = args.words.read().splitlines()
+domains = args.domains
+
 matches = []
+
 
 for domain in tlds:
 	for word in words:
@@ -18,5 +35,5 @@ for domain in tlds:
 			matches.append(match)
 			domains.write(match + '\n')
 
-print(matches)
 
+print('Done! Check', args.domains.name)
