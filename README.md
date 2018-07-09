@@ -11,14 +11,14 @@ python domainer.py [--tld TLD] [--words WORDS] [--domains DOMAINS]
 ```
 
 ```sh
-  --tld TLD, -t TLD
-                        list of top level domains (tlds), default iana.org list if left empty
+  --tld, -t
+                list of top level domains (tlds), default iana.org list if left empty
   
-  --words WORDS, -w WORDS
-                        list of words to search, defaults to 1000.txt (a list of the 1000 most popular used words)
+  --words, -w
+                list of words to search, defaults to 1000.txt (a list of the 1000 most popular used words)
 
-  --domains DOMAINS, -d DOMAINS
-                        file to output to, defaults to domains.txt
+  --domains, -d
+                file to output to, defaults to domains.txt
 ```
 
 
