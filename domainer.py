@@ -2,7 +2,7 @@ import argparse, urllib.request
 
 parser = argparse.ArgumentParser(description='Find possible domains that use the tld in the name')
 parser.add_argument('--tld','-t', default=None,type=argparse.FileType('r'), help='list of top level domains (tlds), default iana.org list if left empty')
-parser.add_argument('--words','-w', required=True, type=argparse.FileType('r'), help='list of words to search')
+parser.add_argument('--words','-w', default='1000.txt', type=argparse.FileType('r'), help='list of words to search, defaults to 1000.txt (a list of the 1000 most popular used words)')
 parser.add_argument('--domains', '-d', default='domains.txt', type=argparse.FileType('w'), help="file to output to, defaults to domains.txt")
 
 args = parser.parse_args()
