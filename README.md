@@ -7,10 +7,11 @@
 
 ## Usage example
 ```sh
-python domainer.py [--tld TLD] --words WORDS [--domains DOMAINS]
+python domainer.py [--tld TLD] [--words WORDS] [--domains DOMAINS]
+```
 
 optional arguments:
-
+```sh
   --tld TLD, -t TLD
                         list of top level domains (tlds), default iana.org list if left empty
   
