@@ -19,14 +19,14 @@ $ Done! Check domains.txt
 ```
 
 ```sh
---tld, -t
-                list of top level domains (tlds), default iana.org list if left empty
+--tld, -t TLD
+                    list of top level domains (tlds), default iana.org list if left empty
   
---words, -w
-                list of words to search, defaults to 1000.txt (a list of the 1000 most popular used words)
+--words, -w WORDS
+                    list of words to search, defaults to 1000.txt (a list of the 1000 most popular used words)
 
---domains, -d
-                file to output to, defaults to domains.txt
+--domains, -d DOMAINS
+                    file to output to, defaults to domains.txt
 ```
 
 
