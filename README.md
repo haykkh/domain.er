@@ -8,6 +8,17 @@
 ## Usage example
 ```sh
 python domainer.py [--tld TLD] --words WORDS [--domains DOMAINS]
+
+optional arguments:
+
+  --tld TLD, -t TLD
+                        list of top level domains (tlds), default iana.org list if left empty
+  
+  --words WORDS, -w WORDS
+                        list of words to search, defaults to 1000.txt (a list of the 1000 most popular used words)
+
+  --domains DOMAINS, -d DOMAINS
+                        file to output to, defaults to domains.txt
 ```
 
 
