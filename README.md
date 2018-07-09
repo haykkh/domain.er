@@ -7,7 +7,15 @@
 
 ## Usage example
 ```sh
-python domainer.py [--tld TLD] [--words WORDS] [--domains DOMAINS]
+$ python domainer.py [--tld TLD] [--words WORDS] [--domains DOMAINS]
+```
+Saves a list of ``WORDS`` that use a ``TLD`` as the ending of the ``DOMAINS`` to a file.
+
+e.g
+
+```sh
+$ python domainer.py -t tlds.txt -w words.txt -d domains.txt
+$ Done! Check domains.txt
 ```
 
 ```sh
